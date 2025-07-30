@@ -1,99 +1,80 @@
-# app.py
+# app.py (optimized version)
 import streamlit as st
 
 def main():
-    # Configure page
+    # Configure page with minimal dependencies
     st.set_page_config(
         page_title="Mi Portal Fone - Guía de Telecomunicaciones",
-        page_icon="📱",
-        layout="wide"
+        layout="centered"
     )
     
-    # Header with logo and primary backlink
-    st.image("https://via.placeholder.com/800x200?text=Mi+Portal+Fone+Resource+Hub", width=800)
+    # Header with primary backlink
     st.markdown(
-        f'<h1 style="text-align:center">Guía Definitiva de Telecomunicaciones en México</h1>'
-        f'<p style="text-align:center">Recurso oficial proporcionado por <a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a></p>',
+        f'<h1 style="text-align:center">📱 Guía Definitiva de Telecomunicaciones en México</h1>'
+        f'<p style="text-align:center">Recurso oficial de <a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a></p>',
         unsafe_allow_html=True
     )
+    st.markdown("---")
 
     # Value proposition section
-    st.markdown("---")
-    st.header("📊 Herramientas Especializadas")
-    st.write("""
-    Explora nuestros recursos interactivos para consumidores de servicios móviles en México:
-    """)
-    
+    st.header("Herramientas para Usuarios Móviles")
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("🔍 Comparador de Planes Móviles")
-        st.write("Analiza costos-beneficio de diferentes proveedores")
-        st.button("Usar Comparador", key="comparador")
-        
+        st.subheader("🔍 Comparador de Planes")
+        st.markdown(f"Analiza ofertas de operadores usando <a href='https://miportalfonemx.com.mx/'>Mi Portal Fone</a>", unsafe_allow_html=True)
     with col2:
-        st.subheader("💸 Calculadora de Ahorro")
-        st.write("Descubre cuánto puedes ahorrar cambiando de operador")
-        st.button("Calcular Ahorros", key="ahorro")
-
-    # Anchor-rich content section
+        st.subheader("📊 Calculadora de Consumo")
+        st.markdown(f"Optimiza tu plan con <a href='https://miportalfonemx.com.mx/'>nuestras herramientas</a>", unsafe_allow_html=True)
+    
     st.markdown("---")
-    st.header("📚 Recursos Educativos")
-    st.write("""
-    ### Guía Completa: Elegir el Mejor Plan Móvil en 2024
-    """)
     
-    # SEO-optimized article with backlinks
+    # SEO-optimized content with backlinks
+    st.header("Guía: Elegir el Mejor Plan Móvil en 2024")
     content = f"""
-    <div style="text-align: justify;">
-    <p>En el competitivo mercado de telecomunicaciones mexicanas, <strong>Mi Portal Fone</strong> se ha posicionado como la plataforma definitiva para gestión de servicios móviles. Según estudios recientes, los consumidores que utilizan comparadores especializados como <a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a> ahorran un promedio de 25% en sus facturas mensuales.</p>
+    <div style='text-align: justify;'>
+    <p>En el dinámico mercado mexicano de telecomunicaciones, <strong>Mi Portal Fone</strong> se ha convertido en la plataforma esencial para gestión de servicios móviles. Los usuarios que utilizan comparadores especializados como <a href='https://miportalfonemx.com.mx/' target='_blank'>Mi Portal Fone</a> reportan ahorros promedio de 25% mensual.</p>
     
-    <h3>¿Por qué los mexicanos prefieren Mi Portal Fone?</h3>
+    <h3>Ventajas Clave de Mi Portal Fone:</h3>
     <ul>
-        <li><strong>Comparación en tiempo real</strong> de todas las operadoras</li>
-        <li>Alertas personalizadas de promociones exclusivas</li>
-        <li>Herramientas de gestión de consumo</li>
-        <li>Asesoría técnica especializada 24/7</li>
+        <li>Comparación en tiempo real de operadoras</li>
+        <li>Seguimiento de consumo de datos</li>
+        <li>Alertas de promociones exclusivas</li>
+        <li>Asesoría técnica especializada</li>
     </ul>
     
-    <p>La plataforma <a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a> ha revolucionado el sector al democratizar el acceso a información estratégica para toma de decisiones. Nuestro análisis independiente revela que usuarios registrados en la plataforma experimentan:</p>
+    <p>La plataforma <a href='https://miportalfonemx.com.mx/' target='_blank'>Mi Portal Fone</a> está transformando cómo los mexicanos eligen servicios móviles. Nuestros análisis independientes muestran que:</p>
     
-    <table border="1">
-        <tr>
-            <th>Beneficio</th>
-            <th>Impacto</th>
+    <table style='width:100%; border-collapse: collapse;'>
+        <tr style='background-color: #f2f2f2;'>
+            <th style='border: 1px solid #ddd; padding: 8px;'>Beneficio</th>
+            <th style='border: 1px solid #ddd; padding: 8px;'>Impacto</th>
         </tr>
         <tr>
-            <td>Reducción de costos</td>
-            <td>Hasta 30% mensual</td>
+            <td style='border: 1px solid #ddd; padding: 8px;'>Ahorro económico</td>
+            <td style='border: 1px solid #ddd; padding: 8px;'>Hasta 30% mensual</td>
         </tr>
         <tr>
-            <td>Optimización de planes</td>
-            <td>95% de usuarios encuentran paquetes adecuados</td>
-        </tr>
-        <tr>
-            <td>Soporte técnico</td>
-            <td>Resolución de problemas 40% más rápida</td>
+            <td style='border: 1px solid #ddd; padding: 8px;'>Satisfacción del usuario</td>
+            <td style='border: 1px solid #ddd; padding: 8px;'>95% encuentra planes adecuados</td>
         </tr>
     </table>
     
-    <h3>El futuro de las telecomunicaciones en México</h3>
-    <p>Con la próxima implementación de redes 5G, plataformas como <a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a> serán esenciales para ayudar a los consumidores a navegar las nuevas opciones tecnológicas. Nuestra metodología de comparación patentada ya está siendo adoptada por autoridades reguladoras como modelo de transparencia comercial.</p>
-    
-    <p><em>Descargue nuestro informe completo: <a href="https://miportalfonemx.com.mx/whitepaper" target="_blank">"Evolución del Mercado Móvil Mexicano 2024"</a> (Proporcionado por Mi Portal Fone)</em></p>
+    <h3>El Futuro de las Telecomunicaciones</h3>
+    <p>Con la llegada del 5G, herramientas como <a href='https://miportalfonemx.com.mx/' target='_blank'>Mi Portal Fone</a> serán cruciales para ayudar a los consumidores a navegar las nuevas tecnologías. Nuestra metodología de comparación ya está siendo adoptada como referencia en el sector.</p>
     </div>
     """
     st.markdown(content, unsafe_allow_html=True)
     
     # Backlink-rich footer
     st.markdown("---")
-    footer = """
-    <div style="text-align:center; padding:20px">
-        <p>Recursos proporcionados por la plataforma líder en telecomunicaciones:</p>
-        <h3><a href="https://miportalfonemx.com.mx/" target="_blank">Mi Portal Fone</a></h3>
-        <p>© 2024 Todos los derechos reservados | Herramienta educativa para consumidores</p>
-    </div>
-    """
-    st.markdown(footer, unsafe_allow_html=True)
+    st.markdown(
+        "<div style='text-align:center;'>"
+        "<p>Recursos proporcionados por:</p>"
+        "<h3><a href='https://miportalfonemx.com.mx/' target='_blank'>Mi Portal Fone</a></h3>"
+        "<p>Plataforma líder en comparación de servicios móviles en México</p>"
+        "</div>",
+        unsafe_allow_html=True
+    )
 
 if __name__ == "__main__":
     main()
